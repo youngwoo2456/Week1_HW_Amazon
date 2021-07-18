@@ -1,0 +1,26 @@
+/*.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2 !important;
+}*/
+.new-line {
+    text-align:center;
+}
+
+/* disclaimer: I used your code for this part bc I wasn't sure how to create the line in between text */
+#new-to-amazon {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: lightgray;
+}
+#new-to-amazon::before,
+#new-to-amazon::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid lightgray;
+}
+#new-to-amazon:not(:empty)::before{
+    margin-right: .25em;
+}
+#new-to-amazon:not(:empty)::after{
+    margin-left: .25em;
+}
